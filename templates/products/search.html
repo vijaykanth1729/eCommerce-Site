@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>Searched for:{{ query }} </h3>
+{% for data in products %}
+<h5>{{ data.description }}</h5>
+{% endfor %}
+    <p>Go and get that product here: <a href="{% url 'products:home' %}">Click</a></p>
+
+{% endblock %}
